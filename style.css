@@ -79,8 +79,6 @@ nav a.active {
   border-color: #000;
 }
 
-
-
 /* === INTRO SECTION === */
 .intro-section {
   text-align: center;
@@ -193,17 +191,19 @@ nav a.active {
 /* Use a grid to fit 2 cards per row */
 .project-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(480px, 1fr));
+  grid-template-columns: repeat(2, 1fr);
   gap: 30px;
 }
+
 
 /* Keep your existing project-card styles, but adjust sizing */
 .project-card {
   background-color: #1a1a1a;
-  border-radius: 12px;
+  border-radius: 5px;
   overflow: hidden;
   box-shadow: 0 6px 20px rgba(0,0,0,0.25);
   transition: transform 0.3s ease;
+  padding: 0rem;
 }
 
 .project-card:hover {
@@ -252,6 +252,7 @@ nav a.active {
   color: #ff5c8d; /* pink-ish title */
   font-size: 1.4rem;
   margin-bottom: 8px;
+  font-weight: 600
 }
 
 .project-info .role {
@@ -463,125 +464,209 @@ nav a.active {
   transform: scale(1.1); /* small zoom on hover */
 }
 
-/* === PROJECT SPECIFIC WEB PAGES === */
+/* ===============================
+   PAGE_ PROJECT STYLES (SAFE)
+================================ */
 
-/* === PROJECT PAGE: VIDEO HERO === */
-.project-page-video-section {
+.PAGE_body {
+  background-color: #0f0f0f;
+  color: #eaeaea;
+}
+
+.PAGE_section {
+  margin-bottom: 2rem;
+}
+
+/* HERO */
+.PAGE_project-hero {
   position: relative;
-  width: 100%;
-  height: 100vh;
+  height: 80vh;
+  min-height: 420px;
   overflow: hidden;
 }
 
-.project-page-video-section video {
+.PAGE_project-hero video {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  filter: brightness(70%);
 }
 
-.project-page-video-overlay {
+.PAGE_hero-overlay {
   position: absolute;
-  bottom: 0%;
-  left: 0%;
-  width: 100%;	
-  background-color: rgba(0, 0, 0, 0.6);
-  padding: 0.1rem 2rem;
-  
-}
-
-.project-page-video-overlay h1 {
-  font-size: 1.5rem;
-  color: #8ef3ff;
-}
-
-.project-details-container {
-  display: grid; /* FIXED: Use Grid for reliable two-column layout */
-  grid-template-columns: 1fr 1fr; /* Two equal columns */
-  gap: 1.5rem;
-  margin: -5rem auto 3rem auto; /* Adjusted margin to move it up slightly */
-  width: 90%;
-  max-width: 1200px;
-}
-
-.project-details-container .project-page-card {
-  background-color: #1b1b1b;
-  border-radius: 12px;
-  padding: 1.5rem;
-  box-shadow: 0 0 20px rgba(0,0,0,0.4);
-}
-
-.project-info-list {
-  list-style: none; /* Remove default bullet points */
-  padding: 0;
-  margin: 0;
-}
-
-.project-info-list li {
-  display: flex; /* Use flex for icon and text alignment */
-  align-items: center;
-  margin-bottom: 0.8rem;
-  color: #ccc;
-  line-height: 1.4;
-}
-
-.project-info-list li span {
-  font-size: 1.2rem;
-  margin-right: 0.7rem;
-  color: #8ef3ff; /* Use your highlight color for the icons/symbols */
-}
-
-.details-about-card p {
-  color: #fff; /* Changed from #ccc to white for better contrast */
-  line-height: 1.6;
-}
-
-/* === PROJECT PAGE: INFO CARDS === */
-.project-page-info-section {
+  inset: 0;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1.5rem;
-  margin: 2rem auto;
-  width: 90%;
+  align-items: flex-end;
+  background: linear-gradient(to top, rgba(0,0,0,0.85), transparent);
 }
 
-.project-page-card {
-  background-color: #1b1b1b;
-  border-radius: 12px;
-  padding: 1.5rem;
-  flex: 1 1 400px;
-  box-shadow: 0 0 20px rgba(0,0,0,0.4);
-}
-
-.project-page-card h2 {
-  margin-bottom: 1rem;
+.PAGE_hero-title {
+  font-size: 3rem;
+  font-weight: 700;
   color: #fff;
 }
 
-/* === PROJECT PAGE: INTRO SECTION === */
-.project-page-intro-section {
-  width: 90%;
-  max-width: 1200px;
-  margin: 3rem auto;
+.PAGE_hero-subtitle {
+  font-size: 1.2rem;
+  color: #ff5c8d;
+  margin-bottom: 2rem;
 }
 
-.project-page-intro-section h2 {
-  color: #8ef3ff;
-  margin-bottom: 1rem;
+/* CONTENT */
+.PAGE_project-content {
+  position: relative;
+  z-index: 2;
 }
 
-.project-page-intro-section p {
-  line-height: 1.6;
+/* CARD */
+.PAGE_project-card {
+  background-color: #1b1b1b;
+  border-radius: 12px;
+  padding: 2rem;
+  height: 100%;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.5);
+}
+
+.PAGE_section-title {
+  font-size: 1.5rem;
+  color: #ff5c8d;
+  margin-bottom: 1.5rem;
+  font-weight: 1000 
+}
+
+/* INFO LIST */
+.PAGE_project-info-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.PAGE_project-info-list li {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.8rem 0;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.PAGE_project-info-list li span {
+  font-size: 0.85rem;
+  color: #aaa;
+  text-transform: uppercase;
+}
+
+.PAGE_project-info-list li strong {
+  color: #fff;
+  font-weight: 600;
+}
+
+/* BUTTON */
+.PAGE_project-button {
+  letter-spacing: 0.5px;
+}
+
+/* WHAT I LEARNED */
+.PAGE_learned-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.PAGE_learned-list li {
+  margin-bottom: 1.8rem;
+}
+
+.PAGE_learned-list h4 {
+  font-size: 1.1rem;
+  color: #ff5c8d;
+  margin-bottom: 0.4rem;
+}
+
+.PAGE_learned-list p {
   color: #ddd;
+  line-height: 1.6;
 }
 
-/* === RESPONSIVE === */
+/* ===============================
+   PAGE_ GALLERY
+================================ */
+
+.PAGE_gallery-section {
+  position: relative;
+}
+
+/* Frame */
+.PAGE_gallery-item {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: linear-gradient(145deg, #1f1f1f, #141414);
+  border-radius: 14px;
+  padding: 6px;
+  box-shadow:
+    0 10px 30px rgba(0,0,0,0.6),
+    inset 0 0 0 1px rgba(255,255,255,0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+}
+
+/* Media inside frame */
+.PAGE_gallery-item img,
+.PAGE_gallery-item video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  display: block;
+}
+
+/* Hover effect (desktop only) */
+.PAGE_gallery-item:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow:
+    0 20px 40px rgba(0,0,0,0.75),
+    0 0 25px rgba(142,243,255,0.25);
+}
+
+/* Subtle glow edge */
+.PAGE_gallery-item::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 14px;
+  pointer-events: none;
+  box-shadow: inset 0 0 0 1px rgba(142,243,255,0.15);
+}
+
+/* MOBILE */
 @media (max-width: 768px) {
-  .project-page-info-section,
-  .project-details-container {
-    /* Changed from flex-direction: column to simply removing the grid template */
-    grid-template-columns: 1fr; /* Stacks the two cards vertically */
-    align-items: center;
-    width: 95%;
-  }
+  	
+  .intro-section h1 {
+    font-size: 2rem;
+  }
+
+  .intro-section .role {
+    font-size: 1rem;
+    padding: 10px 15px;
+  }
+	
+  .project-card:hover {
+    transform: none;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+  }
+
+  .project-video video {
+    filter: saturate(100%);
+  }
+	
+  .PAGE_hero-title {
+    font-size: 2.2rem;
+  }
+	
+  .PAGE_gallery-item:hover {
+    transform: none;
+    box-shadow:
+      0 10px 30px rgba(0,0,0,0.6),
+      inset 0 0 0 1px rgba(255,255,255,0.05);
+  }
+	
 }
