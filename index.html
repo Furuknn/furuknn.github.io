@@ -17,14 +17,48 @@
 </head>
 <body>
 <!-- NAVIGATION -->
-<nav>
-  <ul class="d-flex flex-wrap justify-content-center">
-    <li><a href="#intro" class="active">Intro</a></li>
-    <li><a href="#about">About Me</a></li>
-    <li><a href="#projects">Projects</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
+<nav class="navbar navbar-expand-md fixed-top">
+  <div class="container">
+
+    <!-- Brand / Name -->
+    <a class="navbar-brand text-white fw-semibold" href="#intro">
+      Furkan Erbilgin
+    </a>
+
+    <!-- Hamburger -->
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#mainNavbar"
+      aria-controls="mainNavbar"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Links -->
+    <div class="collapse navbar-collapse" id="mainNavbar">
+      <ul class="navbar-nav ms-auto mb-2 mb-md-0 text-center">
+        <li class="nav-item">
+          <a class="nav-link active" href="#intro">Intro</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#about">About Me</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#projects">Projects</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#contact">Contact</a>
+        </li>
+      </ul>
+    </div>
+
+  </div>
 </nav>
+
 
   <header id="intro" class="intro-section text-center container">
     <p class="hello">Hello, I'm</p>
@@ -60,6 +94,14 @@
             <p>erbilginfurkan@gmail.com</p>
           </div>
         </div>
+		  
+		   <!-- CURRENTLY LEARNING -->
+		  <div class="learning-box">
+			<span class="learning-label">Currently learning</span>
+			<p>
+			  Creating stunning visual effects via Unity's Shader Graph and VFX Graph.
+			</p>
+		  </div>
 
         <div class="cv-buttons">
           <a href="Furkan_CV_EN.pdf" class="cv-btn">Download English CV</a>
@@ -92,6 +134,8 @@
       <p class="role">Game Developer</p>
       <p class="desc">
       BoV is a <strong>2D pixel-art sword-fighting game</strong> inspired by the <em>sabre</em> form of fencing. The game features both <strong>PvE</strong> and <strong>PvP</strong> game modes. Play as <strong>Erina</strong> and carve your way through story-driven encounters, or test your reflexes against friends in PvP battles featuring four distinct fighting styles, each with its own rhythm and personality.</p>
+		
+		<span class="project-cta">View Case Study ></span>
     </div>
   </div>
 
@@ -113,6 +157,8 @@
       <p class="role">Game Programmer</p>
       <p class="desc">
         PERS is a <strong>multiplayer puzzle–escape room adventure</strong> where you and your partner play as two archaeologists exploring a <strong>mysterious ancient temple</strong>. You will have to solve intricate puzzles together, until your paths split. What begins as teamwork ends in betrayal, as the final act throws both players into a tense <strong>FPS showdown</strong> where only one can escape.</p>
+		
+		<span class="project-cta">View Case Study ></span>
     </div>
   </div>
 	 
@@ -134,6 +180,8 @@
       <p class="role">Game Developer</p>
       <p class="desc">
         PERS is a <strong>multiplayer puzzle–escape room adventure</strong> where you and your partner play as two archaeologists exploring a <strong>mysterious ancient temple</strong>. You will have to solve intricate puzzles together, until your paths split. What begins as teamwork ends in betrayal, as the final act throws both players into a tense <strong>FPS showdown</strong> where only one can escape.</p>
+		
+		<span class="project-cta">View Case Study ></span>
     </div>
   </div>
 	 
@@ -155,6 +203,8 @@
       <p class="role">Game Developer</p>
       <p class="desc">
         PERS is a <strong>multiplayer puzzle–escape room adventure</strong> where you and your partner play as two archaeologists exploring a <strong>mysterious ancient temple</strong>. You will have to solve intricate puzzles together, until your paths split. What begins as teamwork ends in betrayal, as the final act throws both players into a tense <strong>FPS showdown</strong> where only one can escape.</p>
+		
+		<span class="project-cta">View Case Study ></span>
     </div>
   </div>
 	 
@@ -206,7 +256,7 @@
 <section id="ship-zone" class="ship-zone" aria-label="spaceship zone">
   <!-- you can add background or other visuals inside this section -->
   <div class="spaceship-container">
-    <img src="spaceship.png" alt="Spaceship" class="spaceship">
+    <img src="images/spaceship.png" alt="Spaceship" class="spaceship">
   </div>
 </section>
 	
@@ -216,7 +266,7 @@
 <!-- === FOOTER === -->
 <footer class="footer">
   <div class="footer-left">
-    <img src="pfp.png" alt="Furkan" class="footer-pic">
+    <img src="images/pfp.png" alt="Furkan" class="footer-pic">
     <div>
       <h4>Furkan Erbilgin</h4>
       <p>Game Developer | Programmer | VFX Artist</p>
@@ -238,6 +288,10 @@
     </div>
   </div>
 </footer>
+
+<!-- BOOTSTRAP -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
 	
 <!-- Navigation Bar's blur effect -->
 <script>
